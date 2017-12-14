@@ -1,0 +1,20 @@
+Function fnArrayTest(arrToTest() As Variant)
+    'Take an array and output it to the Immediate Window
+    
+    Dim i As Integer, j As Integer
+    Dim strOutPut As String
+    
+    'arr = fnGetSKUCounts("extras", "forecast")
+    
+    For i = 1 To UBound(arrToTest, 1)
+        For j = 1 To UBound(arrToTest, 2)
+            strOutPut = strOutPut & arrToTest(i, j) & " | "
+        
+        Next j
+        
+        Debug.Print strOutPut & Chr(13)
+        strOutPut = ""
+        
+    Next i
+
+End Function
